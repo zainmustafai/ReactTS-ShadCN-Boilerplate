@@ -1,0 +1,162 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('/assets/fonts/Caudex-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('/assets/fonts/Caudex-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-all duration-150 ease-in-out;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: #FA23F5;
+  color: aliceblue;
+}
+
+body {
+  font-family: "Athiti", sans-serif, ;
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 225, 60%, 4%;
+
+    --border-active: 208, 99%, 63%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* --gradient-primary: linear-gradient(264.56deg, #38AEFF 22.41%, #FA23F5 99.18%); */
+    --gradient-primary: 264.56, #38AEFF 22.41%, #FA23F5 99.18%;
+    --gradient-primary-foreground: 0, 0%, 98%;
+
+
+    /*  */
+    --space: 1rem;
+
+    /* COMMON COLORS IN DARK & LIGHT THEME */
+    --light: 0 0% 98%;
+    --light-foreground: 206, 9%, 15%, 1;
+    --light-accent: 210 40% 96.1%;
+    --light-accent-foreground: 222.2 47.4% 11.2%;
+
+    --dark: 225, 60%, 4%;
+    --dark-foreground: 0, 0%, 98%;
+    --dark-accent: 217.2 32.6% 17.5%;
+    --dark-accent-foreground: 210 40% 98%;
+
+
+    --primary: 297, 91%, 57%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 253, 93%, 71%;
+    --secondary-foreground: 0 0% 98%;
+
+    --tertiary: 204, 99%, 61%;
+    --tertiary-foreground: 0 0% 98%;
+
+    --vibrant: 204, 100%, 61%;
+    --vibrant-foreground: 225, 60%, 4%;
+    --vibrant-secondary: 301, 96%, 56%;
+    --vibrant-secondary-foreground: 225, 60%, 4%;
+
+
+
+  }
+
+  .dark {
+    --background: 225, 60%, 4%;
+    --foreground: 0, 0%, 98%;
+
+    --card: 220, 56%, 6%;
+    --card-active: 232, 27%, 16%;
+    --card-foreground: 0, 0%, 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 232, 27%, 16%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* =================== GRADIENTS */
+.gradient-primary {
+  @apply bg-gradient-to-br from-[#38AEFF] to-[#FA23F5];
+}
+.gradient-secondary {
+  background: linear-gradient(264.56deg, #38AEFF 22.41%, #FA23F5 99.18%) !important;
+}
+
+/* ==========================>TYPOGRAPGHY */
+.gradient-text {
+  background: linear-gradient(264.56deg, #38AEFF 22.41%, #FA23F5 99.18%);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
